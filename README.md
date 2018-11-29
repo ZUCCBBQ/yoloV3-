@@ -12,3 +12,5 @@ opencv:安装OpenCV太麻烦了所有在实验的时候安装了opencv-contrib-p
    2.用这个文件和data/文件夹下面的dog.jpg可以复现出论文里面的dog图片结果<br />
    3.实验很简单：./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg<br />
      yolov3.cfg是darknet自带的文件应该不需要修改（具体忘了）。<br />
+#### 在VOC数据集上训练：训练数据：  
+  ；  ；下载文件：

@@ -13,12 +13,16 @@ opencv:安装OpenCV太麻烦了所有在实验的时候安装了opencv-contrib-p
 &emsp;&emsp;&emsp;&emsp;3.实验很简单：./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg<br />
 &emsp;&emsp;&emsp;&emsp;yolov3.cfg是darknet自带的文件应该不需要修改（具体忘了）。<br />
 #### 在VOC数据集上训练：  
-&emsp;&emsp;&emsp;&emsp;训练数据:  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtrainval_11-May-2012.tar```  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtrainval_06-Nov-2007.tar```  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar```
-&emsp;&emsp;&emsp;&emsp;下载文件:  
+&emsp;&emsp;&emsp;&emsp;下载数据:  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtrainval_11-May-2012.tar```  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtrainval_06-Nov-2007.tar```  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar```  
+&emsp;&emsp;&emsp;&emsp;解压文件:  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar```  
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar```  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar```
-
-
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar```  
+&emsp;&emsp;&emsp;&emsp;识别出目标要生成标签（没标签网络自然学习不了目标是啥）：  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```wget https://pjreddie.com/media/files/voc_label.py```  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;python voc_label.py  
+&emsp;&emsp;&emsp;&emsp;*生成标签之后还要生成一个train.txt文件：  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;```cat 2007_train.txt 2007_val.txt 2012_*.txt > train.txt```

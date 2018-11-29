@@ -13,5 +13,5 @@ opencv:安装OpenCV太麻烦了所有在实验的时候安装了opencv-contrib-p
    3.实验很简单：./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg<br />
      yolov3.cfg是darknet自带的文件应该不需要修改（具体忘了）。<br />
 #### 在VOC数据集上训练：  
-                      训练数据:  
-                      下载文件：
+&ensp;&ensp;&ensp;&ensp;训练数据:  
+&ensp;&ensp;&ensp;&ensp;下载文件：
